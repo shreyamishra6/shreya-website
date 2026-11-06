@@ -1,0 +1,2165 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&family=Zen+Maru+Gothic:wght@500;700;900&display=swap');
+
+:root {
+  font-family: 'DM Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #1b1018;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* ==========================================
+   SHREYA.EXE — 2004 TOKYO GYARU EDITION
+========================================== */
+
+.gyaru-site {
+  --cherry: #f50075;
+  --bubblegum: #ff8fc8;
+  --silver: #e6e3ed;
+  --chrome: #aeb5c7;
+  --ink: #170e13;
+  --cream: #fff0e5;
+
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  color: var(--ink);
+  background: #1b1018;
+  isolation: isolate;
+}
+
+/* WALLPAPER */
+
+.gyaru-wallpaper {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 15%, #762044 0%, transparent 45%),
+    radial-gradient(ellipse at 5% 85%, #57213b 0%, transparent 35%),
+    linear-gradient(135deg, #100c12, #28131e 55%, #100d17);
+}
+
+.gyaru-wallpaper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: .16;
+  background-image: radial-gradient(#ffc3df 1px, transparent 1px);
+  background-size: 5px 5px;
+}
+
+.gyaru-wallpaper::after {
+  content: "♡ ★ ✧ GLAMOUR ✧ ★ ♡";
+  position: absolute;
+  top: 35%;
+  left: -5%;
+  width: 110%;
+  color: #ffffff08;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 12vw;
+  font-weight: 700;
+  white-space: nowrap;
+  transform: rotate(-13deg);
+  pointer-events: none;
+}
+
+/* TOP BAR */
+
+.gyaru-topbar {
+  position: relative;
+  z-index: 5;
+  height: 34px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3%;
+  color: #fff1f8;
+  background: linear-gradient(
+    180deg,
+    #fff 0%,
+    #d9d9e5 8%,
+    #8e899d 24%,
+    #37303d 53%,
+    #17131d 100%
+  );
+  border-bottom: 1px solid #ff9dcc;
+  box-shadow: 0 3px 15px #0008;
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+.gyaru-topbar a {
+  color: #ffb6dc;
+  text-decoration: none;
+  transition: color .2s;
+}
+
+.gyaru-topbar a:hover {
+  color: white;
+  text-shadow: 0 0 10px #ff9dcc;
+}
+
+/* PAGE */
+
+.gyaru-main {
+  position: relative;
+  width: min(1180px, 94%);
+  margin: 0 auto;
+  padding: 40px 0 25px;
+}
+
+/* MASTHEAD */
+
+.gyaru-masthead {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  align-items: center;
+  padding: 12px 0 27px;
+  border-bottom: 1px solid #ff9acb88;
+}
+
+.masthead-center {
+  text-align: center;
+}
+
+.masthead-side {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: #e7b2cd;
+  font-size: 8px;
+  letter-spacing: 1.5px;
+}
+
+.masthead-side.right {
+  text-align: right;
+}
+
+.masthead-kicker {
+  color: #ffb2d6;
+  font-size: 9px;
+  letter-spacing: 5px;
+}
+
+.masthead-center h1 {
+  position: relative;
+  margin: 2px 0 0;
+  color: transparent;
+  background: linear-gradient(
+    180deg,
+    #fff 0%,
+    #fff 12%,
+    #dceeff 20%,
+    #a6b4c8 29%,
+    #fff 39%,
+    #ffb9dd 49%,
+    #f52c91 62%,
+    #9b185d 75%,
+    #ffd5eb 89%,
+    #fff 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(75px, 12vw, 150px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -10px;
+  filter:
+    drop-shadow(0 2px 0 white)
+    drop-shadow(0 5px 0 #8d245b)
+    drop-shadow(0 9px 0 #270c20)
+    drop-shadow(0 0 24px #ff4f9a77);
+}
+
+.masthead-center h1 span {
+  display: inline-block;
+  margin-left: 8px;
+  color: #ff9bd0;
+  font-size: .35em;
+  vertical-align: top;
+  transform: rotate(15deg);
+}
+
+.masthead-subtitle {
+  margin-top: 10px;
+  color: #f6d1e5;
+  font-size: 8px;
+  letter-spacing: 3px;
+}
+
+/* MARQUEE */
+
+.gyaru-marquee {
+  position: relative;
+  overflow: hidden;
+  margin: 15px 0 22px;
+  padding: 9px 0;
+  border-top: 1px solid #ffafd8;
+  border-bottom: 1px solid #ffafd8;
+  background: linear-gradient(90deg, #a71d5c, #fa3a91, #a71d5c);
+  color: white;
+  font-size: 9px;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: gyaru-marquee 35s linear infinite;
+}
+
+.marquee-track span {
+  flex-shrink: 0;
+}
+
+@keyframes gyaru-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* COLLAGE */
+
+.gyaru-collage {
+  display: grid;
+  grid-template-columns: 1.05fr 1.35fr .9fr;
+  grid-template-rows: minmax(300px, auto) minmax(255px, auto) minmax(235px, auto);
+  gap: 16px;
+}
+
+.gyaru-collage article {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #ffffffa0;
+  box-shadow:
+    0 5px 0 #5d2346,
+    0 9px 20px #0007,
+    inset 0 1px 0 white;
+}
+
+.section-label {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  z-index: 2;
+  color: #7d315d;
+  font-size: 8px;
+  letter-spacing: 1.2px;
+}
+
+/* PROFILE */
+
+.gyaru-profile {
+  grid-column: 1;
+  grid-row: 1;
+  padding: 40px 20px 15px;
+  background:
+    radial-gradient(circle at 80% 20%, #fff9 0 2px, transparent 3px),
+    linear-gradient(145deg, #ffcae4, #f47cb9 55%, #c33d80);
+}
+
+.profile-label {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  color: #7d315d;
+  font-size: 8px;
+}
+
+.profile-sticker {
+  position: relative;
+  width: 83px;
+  height: 83px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 14px;
+  border: 3px solid white;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 35% 25%, white, transparent 35%),
+    linear-gradient(145deg, #ffeff8, #e83d91 70%, #8f225f);
+  box-shadow:
+    0 0 0 3px #d94b91,
+    0 5px 15px #9a205566;
+}
+
+.sticker-letter {
+  color: white;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 47px;
+  font-weight: 700;
+  text-shadow: 0 3px 4px #7e2459;
+}
+
+.sticker-star,
+.sticker-heart {
+  position: absolute;
+  color: white;
+  font-size: 23px;
+  text-shadow: 0 1px 5px #a12c6b;
+}
+
+.sticker-star {
+  top: -13px;
+  right: -12px;
+}
+
+.sticker-heart {
+  bottom: -7px;
+  left: -12px;
+}
+
+.gyaru-profile h2 {
+  margin: 0 0 10px;
+  color: #4a1231;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 23px;
+  line-height: .98;
+  letter-spacing: -1px;
+}
+
+.gyaru-profile h2 i {
+  color: white;
+  font-family: Georgia, serif;
+  font-weight: 400;
+}
+
+.gyaru-profile p {
+  max-width: 245px;
+  color: #57213f;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.profile-bottom {
+  position: absolute;
+  right: 13px;
+  bottom: 10px;
+  left: 13px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 8px;
+  border-top: 1px solid #8d315d66;
+  color: #76254d;
+  font-size: 7px;
+}
+
+/* CD PLAYER */
+
+.gyaru-player {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  padding: 40px 20px 20px;
+  background:
+    radial-gradient(ellipse at 30% 45%, #fff2, transparent 60%),
+    linear-gradient(135deg, #a5a9b9, #e7e6ee 35%, #85869d 70%, #d9c9df);
+}
+
+.gyaru-player .section-label {
+  color: #393143;
+}
+
+.cd-disc {
+  position: relative;
+  width: 165px;
+  height: 165px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    #e7e7ef,
+    #818ba2,
+    #fff,
+    #f3a9d1,
+    #82879d,
+    #fff,
+    #b8d7e8,
+    #e7e7ef
+  );
+  box-shadow:
+    0 0 0 5px #b9aaba,
+    0 7px 18px #30203866,
+    inset 0 0 0 2px #ffffff99;
+}
+
+.cd-disc::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1px solid #ffffffaa;
+  border-radius: 50%;
+  background: repeating-radial-gradient(
+    circle,
+    transparent 0 5px,
+    #ffffff55 6px,
+    transparent 7px 10px
+  );
+}
+
+.cd-center {
+  z-index: 1;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #ffb3d9, #d52b82);
+  color: white;
+  font-size: 8px;
+  box-shadow: 0 2px 7px #0005;
+}
+
+.cd-center small {
+  font-size: 6px;
+}
+
+.disc-playing {
+  animation: disc-rotation 4s linear infinite;
+}
+
+@keyframes disc-rotation {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.player-info {
+  max-width: 190px;
+}
+
+.player-info > span {
+  color: #51465a;
+  font-size: 7px;
+  letter-spacing: 1px;
+}
+
+.player-info h2 {
+  margin: 10px 0;
+  color: #241b2c;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 30px;
+  line-height: .95;
+  letter-spacing: -1px;
+}
+
+.player-control {
+  display: block;
+  margin: 12px 0 9px;
+  padding: 8px 15px;
+  border: 1px solid white;
+  border-radius: 3px;
+  background: linear-gradient(#ff9dd0, #c8297c);
+  color: white;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  box-shadow: 0 3px 0 #802052;
+  cursor: pointer;
+}
+
+.player-control:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.text-link {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #5e3154;
+  font-family: 'DM Mono', monospace;
+  font-size: 8px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.player-serial {
+  position: absolute;
+  right: 12px;
+  bottom: 10px;
+  color: #4b4255;
+  font-size: 7px;
+}
+
+/* FLIP PHONE */
+
+.gyaru-phone {
+  grid-column: 3;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 35px 15px 15px;
+  background:
+    radial-gradient(circle at 50% 35%, #fff7, transparent 50%),
+    linear-gradient(145deg, #f9d8e9, #c4b6d6);
+}
+
+.flip-phone {
+  position: relative;
+  width: 120px;
+  height: 185px;
+  padding: 12px 9px;
+  border: 3px solid #fff;
+  border-radius: 19px 19px 14px 14px;
+  background: linear-gradient(
+    110deg,
+    #d3d3df,
+    #77758b 25%,
+    #f7e6f1 48%,
+    #8c829d 75%,
+    #d7d1df
+  );
+  box-shadow:
+    0 0 0 2px #9990a5,
+    0 9px 18px #48304766,
+    inset 0 0 7px white;
+  cursor: pointer;
+  transform: rotate(4deg);
+  transition: transform .25s;
+}
+
+.flip-phone:hover {
+  transform: rotate(0) translateY(-5px);
+}
+
+.phone-antenna {
+  position: absolute;
+  top: -13px;
+  right: 19px;
+  width: 4px;
+  height: 15px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #fff, #777);
+}
+
+.phone-screen {
+  height: 67px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border: 3px solid #55465d;
+  border-radius: 5px;
+  background: repeating-linear-gradient(
+    0deg,
+    #c7e5d5 0 2px,
+    #b7d8c7 3px
+  );
+  color: #315c4c;
+  font-family: 'DM Mono', monospace;
+}
+
+.phone-screen span {
+  font-size: 6px;
+}
+
+.phone-screen strong {
+  font-size: 10px;
+}
+
+.phone-screen small {
+  font-size: 6px;
+}
+
+.phone-hinge {
+  height: 8px;
+  margin: 7px -2px;
+  border-radius: 5px;
+  background: linear-gradient(#777, #ddd, #777);
+}
+
+.phone-keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  padding: 0 9px;
+}
+
+.phone-keypad span {
+  display: grid;
+  height: 17px;
+  place-items: center;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  background: linear-gradient(#fff, #b7a9c2);
+  color: #65516c;
+  font-size: 8px;
+  box-shadow: 0 2px 2px #55465d66;
+}
+
+.phone-caption {
+  margin-top: 14px;
+  color: #75365f;
+  font-size: 7px;
+  letter-spacing: 1px;
+}
+
+/* CINEMA */
+
+.gyaru-cinema {
+  grid-column: 1;
+  grid-row: 2;
+  padding: 40px 14px 14px;
+  background:
+    radial-gradient(circle at 100% 0%, #ffb4d9, transparent 50%),
+    linear-gradient(145deg, #7c173e, #260e22);
+}
+
+.gyaru-cinema .section-label {
+  color: #ffd4e9;
+}
+
+.cinema-ticket {
+  display: grid;
+  grid-template-columns: 1fr 65px;
+  min-height: 140px;
+  margin-top: 4px;
+  border: 1px solid #fff;
+  background: linear-gradient(110deg, #fff2e8, #f3d6df);
+  box-shadow: 0 5px 15px #0005;
+  transform: rotate(-2deg);
+}
+
+.ticket-left {
+  padding: 12px;
+}
+
+.ticket-left > span {
+  color: #bc326f;
+  font-size: 7px;
+  letter-spacing: 2px;
+}
+
+.ticket-left h2 {
+  margin: 9px 0;
+  color: #401528;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 23px;
+  line-height: .9;
+}
+
+.ticket-left h2 i {
+  color: #c22c77;
+  font-family: Georgia, serif;
+  font-weight: 400;
+}
+
+.ticket-left small {
+  color: #8d536d;
+  font-size: 6px;
+}
+
+.ticket-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  border-left: 2px dashed #c58ba8;
+  color: #9c285f;
+}
+
+.ticket-right > span {
+  font-size: 23px;
+}
+
+.ticket-right strong {
+  font-size: 10px;
+  text-align: center;
+}
+
+.ticket-right small {
+  font-size: 6px;
+}
+
+.cinema-link {
+  margin-top: 17px;
+  padding: 7px 11px;
+  border: 1px solid #ffb6d8;
+  background: #ffffff12;
+  color: #fff0f7;
+  font-family: 'DM Mono', monospace;
+  font-size: 8px;
+  cursor: pointer;
+  transition: background .2s;
+}
+
+.cinema-link:hover {
+  background: #ff4f9a;
+}
+
+/* BOOKSHELF */
+
+.gyaru-books {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  padding: 42px 22px 18px;
+  background: linear-gradient(
+    135deg,
+    #fff4e8,
+    #f2d8d9 55%,
+    #d8c1d9
+  );
+}
+
+.gyaru-books .section-label {
+  color: #704258;
+}
+
+.books-display {
+  height: 145px;
+  display: flex;
+  align-items: end;
+  gap: 5px;
+  padding: 0 0 5px 7px;
+  border-bottom: 8px solid #8b536b;
+  background: linear-gradient(transparent 85%, #b17a8b 85%);
+}
+
+.book {
+  width: 37px;
+  height: 115px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fff9;
+  color: white;
+  font-family: Georgia, serif;
+  font-size: 9px;
+  text-align: center;
+  line-height: 1.5;
+  writing-mode: vertical-rl;
+  box-shadow: 2px 3px 5px #59304466;
+}
+
+.book-one {
+  height: 112px;
+  background: linear-gradient(90deg, #762c4c, #c66a83);
+}
+
+.book-two {
+  height: 132px;
+  background: linear-gradient(90deg, #b58b4c, #e6c77d);
+  color: #4b2a35;
+}
+
+.book-three {
+  height: 120px;
+  background: linear-gradient(90deg, #435b70, #8ea5ba);
+}
+
+.book-four {
+  height: 99px;
+  background: linear-gradient(90deg, #6e3e7b, #c28acb);
+}
+
+.books-caption h2 {
+  margin: 0 0 13px;
+  color: #542b43;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 24px;
+  line-height: .95;
+}
+
+.books-caption h2 i {
+  color: #b43876;
+  font-family: Georgia, serif;
+  font-weight: 400;
+}
+
+.books-caption button,
+.gyaru-watchlist > button {
+  padding: 8px 10px;
+  border: 1px solid #a84d7c;
+  background: linear-gradient(#fff, #edc4d9);
+  color: #81385d;
+  font-family: 'DM Mono', monospace;
+  font-size: 8px;
+  cursor: pointer;
+}
+
+.books-caption button:hover,
+.gyaru-watchlist > button:hover {
+  background: #ffb2d6;
+}
+
+/* WATCHLIST */
+
+.gyaru-watchlist {
+  grid-column: 3;
+  grid-row: 2;
+  padding: 42px 14px 14px;
+  background: linear-gradient(
+    145deg,
+    #d6e8e8,
+    #a8c8cb 50%,
+    #6c929c
+  );
+}
+
+.gyaru-watchlist .section-label {
+  color: #315c63;
+}
+
+.watchlist-heading {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 15px;
+  color: #24474f;
+  font-size: 8px;
+}
+
+.watchlist-line {
+  display: grid;
+  grid-template-columns: 23px 1fr 13px;
+  align-items: center;
+  gap: 5px;
+  padding: 11px 0;
+  border-top: 1px solid #567b8266;
+  color: #31575f;
+  font-size: 7px;
+}
+
+.watchlist-line strong {
+  font-weight: 500;
+  letter-spacing: .3px;
+}
+
+.gyaru-watchlist > button {
+  margin-top: 12px;
+  border-color: #517e82;
+  background: linear-gradient(#fff, #b7d9da);
+  color: #31575f;
+}
+
+/* EDITORIAL */
+
+.gyaru-editorial {
+  grid-column: 1 / 4;
+  grid-row: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 50px;
+  background:
+    radial-gradient(ellipse at 80% 20%, #ffb8db, transparent 40%),
+    linear-gradient(110deg, #fff0e7, #d9c6d9 55%, #a9b9c9);
+}
+
+.editorial-number {
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  color: #985078;
+  font-size: 8px;
+}
+
+.editorial-copy > span {
+  color: #8a4c70;
+  font-size: 8px;
+  letter-spacing: 3px;
+}
+
+.editorial-copy h2 {
+  margin: 9px 0;
+  color: #251524;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(38px, 6vw, 65px);
+  line-height: .82;
+  letter-spacing: -3px;
+}
+
+.editorial-copy h2 i {
+  color: #d02b81;
+  font-family: Georgia, serif;
+  font-weight: 400;
+}
+
+.editorial-copy p {
+  color: #78445f;
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+
+.editorial-decoration {
+  position: relative;
+  width: 220px;
+  height: 150px;
+}
+
+.editorial-decoration span {
+  position: absolute;
+  color: #d72b86;
+  text-shadow: 0 3px 8px #9b286755;
+}
+
+.editorial-decoration span:nth-child(1) {
+  top: 0;
+  left: 20px;
+  font-size: 100px;
+  transform: rotate(15deg);
+}
+
+.editorial-decoration span:nth-child(2) {
+  top: 50px;
+  right: 20px;
+  color: #fff;
+  font-size: 75px;
+  transform: rotate(-15deg);
+}
+
+.editorial-decoration span:nth-child(3) {
+  top: 5px;
+  right: 5px;
+  color: #6e9bb2;
+  font-size: 35px;
+}
+
+/* FOOTER */
+
+.gyaru-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-top: 19px;
+  padding: 14px 3px;
+  border-top: 1px solid #ff9acb88;
+  color: #d8a9c4;
+  font-size: 7px;
+  letter-spacing: 1px;
+}
+
+.gyaru-footer > div {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+
+.gyaru-footer strong {
+  color: #ffacd5;
+  font-size: 12px;
+}
+
+.gyaru-footer button {
+  padding: 8px 12px;
+  border: 1px solid #ffacd5;
+  background: linear-gradient(#f77bb7, #9f286a);
+  color: white;
+  font-family: 'DM Mono', monospace;
+  font-size: 7px;
+  cursor: pointer;
+  box-shadow: 0 3px 0 #571a43;
+}
+
+.gyaru-footer button:hover {
+  filter: brightness(1.15);
+}
+
+/* SECRET MESSAGE */
+
+.secret-message {
+  position: fixed;
+  z-index: 50;
+  right: 25px;
+  bottom: 25px;
+  width: 240px;
+  padding: 20px;
+  border: 2px solid white;
+  background: linear-gradient(145deg, #ffb8da, #b63d85);
+  color: #4b1838;
+  text-align: center;
+  box-shadow: 0 7px 30px #0008;
+  animation: secret-appear .3s ease-out;
+}
+
+.secret-message > span {
+  color: white;
+  font-size: 32px;
+}
+
+.secret-message p {
+  font-family: Georgia, serif;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.secret-message small {
+  font-size: 7px;
+  letter-spacing: 1px;
+}
+
+@keyframes secret-appear {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* RESPONSIVE — TABLET */
+
+@media (max-width: 850px) {
+  .gyaru-collage {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .gyaru-collage article {
+    min-height: 235px;
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .gyaru-editorial {
+    grid-column: 1 / 3 !important;
+    min-height: 225px !important;
+  }
+
+  .gyaru-player {
+    flex-wrap: wrap;
+  }
+}
+
+/* RESPONSIVE — MOBILE */
+
+@media (max-width: 560px) {
+  .gyaru-topbar {
+    font-size: 6px;
+    gap: 8px;
+  }
+
+  .gyaru-topbar span:nth-child(2) {
+    display: none;
+  }
+
+  .gyaru-main {
+    width: 92%;
+    padding-top: 25px;
+  }
+
+  .gyaru-masthead {
+    grid-template-columns: 1fr;
+  }
+
+  .masthead-side {
+    display: none;
+  }
+
+  .masthead-center h1 {
+    font-size: 72px;
+    letter-spacing: -6px;
+  }
+
+  .masthead-kicker {
+    font-size: 7px;
+    letter-spacing: 2px;
+  }
+
+  .masthead-subtitle {
+    font-size: 6px;
+    letter-spacing: 1px;
+  }
+
+  .gyaru-collage {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .gyaru-collage article,
+  .gyaru-editorial {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+  }
+
+  .gyaru-collage article {
+    min-height: 235px;
+  }
+
+  .gyaru-player {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .gyaru-books {
+    flex-wrap: wrap;
+  }
+
+  .gyaru-editorial {
+    min-height: 225px;
+    padding: 35px 20px;
+  }
+
+  .editorial-decoration {
+    width: 100px;
+  }
+
+  .editorial-decoration span:nth-child(1) {
+    font-size: 60px;
+  }
+
+  .editorial-decoration span:nth-child(2) {
+    font-size: 45px;
+  }
+
+  .gyaru-footer {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .secret-message {
+    right: 15px;
+    bottom: 15px;
+    width: min(240px, calc(100% - 30px));
+  }
+}
+/* =================================
+   INTERACTIVE GYARU FLIP PHONE
+================================= */
+
+.gyaru-phone {
+  position: relative;
+}
+
+.phone-charms {
+  position: absolute;
+  top: 42px;
+  right: 20px;
+  display: flex;
+  gap: 7px;
+  color: #d52b86;
+  font-size: 17px;
+  transform: rotate(12deg);
+}
+
+.phone-charms span:nth-child(2) {
+  color: white;
+}
+
+.phone-charms span:nth-child(3) {
+  color: #8c6ba9;
+}
+
+.flip-phone {
+  position: relative;
+  padding-bottom: 24px;
+}
+
+.phone-brand {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 100%;
+  color: #5b4965;
+  font-size: 6px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+/* OVERLAY */
+
+.phone-overlay {
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: #100812d9;
+  backdrop-filter: blur(9px);
+  animation: phone-fade-in .25s ease;
+}
+
+@keyframes phone-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* DEVICE */
+
+.phone-device {
+  width: min(355px, 90vw);
+  padding: 12px;
+  border: 2px solid white;
+  border-radius: 27px;
+  background: linear-gradient(
+    120deg,
+    #f7e9f2,
+    #9990a9 20%,
+    #f5e5f0 45%,
+    #8b829e 75%,
+    #eee0ef
+  );
+  box-shadow:
+    0 0 0 3px #81758c,
+    0 0 0 6px #d4b5d0,
+    0 25px 90px #000b,
+    inset 0 0 12px white;
+  animation: phone-pop .35s cubic-bezier(.2,.8,.2,1);
+}
+
+@keyframes phone-pop {
+  from {
+    opacity: 0;
+    transform: translateY(35px) rotate(5deg) scale(.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0) scale(1);
+  }
+}
+
+.phone-device-top,
+.phone-device-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 5px;
+  color: #53445d;
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+.phone-device-top button {
+  width: 24px;
+  height: 24px;
+  border: 1px solid white;
+  border-radius: 50%;
+  background: #d85b9c;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+/* SCREEN */
+
+.phone-device-screen {
+  min-height: 465px;
+  padding: 15px;
+  border: 5px solid #54455e;
+  border-radius: 12px;
+  background:
+    radial-gradient(circle at 90% 10%, #fff8, transparent 30%),
+    linear-gradient(145deg, #fce4f0, #e6d8ee 55%, #d0e4e8);
+  color: #4d2947;
+  box-shadow: inset 0 0 20px #8d6b8c55;
+}
+
+.phone-status {
+  display: flex;
+  justify-content: space-between;
+  color: #805374;
+  font-size: 8px;
+}
+
+.phone-welcome {
+  margin: 38px 0 30px;
+}
+
+.phone-welcome > span {
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+
+.phone-welcome h2 {
+  margin: 9px 0;
+  color: #9e286a;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 45px;
+  line-height: .9;
+  letter-spacing: -2px;
+}
+
+.phone-welcome p {
+  font-size: 9px;
+}
+
+.phone-app-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 19px 8px;
+  margin-top: 35px;
+}
+
+.phone-app-grid button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  border: 0;
+  background: none;
+  color: #62435f;
+  cursor: pointer;
+}
+
+.phone-app-grid button:hover .app-icon {
+  transform: translateY(-5px) rotate(-5deg);
+  box-shadow: 0 8px 14px #8c467555;
+}
+
+.app-icon {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border: 2px solid white;
+  border-radius: 14px;
+  color: white;
+  font-size: 24px;
+  box-shadow: 0 4px 8px #6b426344;
+  transition: .2s;
+}
+
+.phone-app-grid small {
+  font-family: 'DM Mono', monospace;
+  font-size: 8px;
+}
+
+.app-icon.pink {
+  background: linear-gradient(145deg, #ffacd5, #d33c8c);
+}
+
+.app-icon.silver {
+  background: linear-gradient(145deg, #fff, #9296ae);
+}
+
+.app-icon.cherry {
+  background: linear-gradient(145deg, #e65a87, #751c49);
+}
+
+.app-icon.cream {
+  background: linear-gradient(145deg, #ffe9c7, #bc8c76);
+}
+
+.app-icon.blue {
+  background: linear-gradient(145deg, #b4dce8, #6288a4);
+}
+
+.app-icon.lavender {
+  background: linear-gradient(145deg, #d9b8e9, #8b5eaa);
+}
+
+.phone-home-footer {
+  margin-top: 34px;
+  color: #98628a;
+  font-size: 7px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.phone-device-bottom button {
+  border: 0;
+  background: none;
+  color: #684765;
+  font-family: 'DM Mono', monospace;
+  font-size: 8px;
+  cursor: pointer;
+}
+
+.phone-device-bottom button:hover {
+  color: #e32c87;
+}
+
+/* MESSAGES */
+
+.phone-messages {
+  min-height: 430px;
+}
+
+.phone-screen-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 8px;
+}
+
+.phone-screen-heading button {
+  border: 0;
+  background: none;
+  color: #a02e70;
+  font-family: 'DM Mono', monospace;
+  font-size: 8px;
+  cursor: pointer;
+}
+
+.phone-messages h2 {
+  margin: 35px 0 25px;
+  color: #a52d70;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 35px;
+}
+
+.message-bubble {
+  width: fit-content;
+  max-width: 85%;
+  margin: 15px 0;
+  padding: 12px;
+  border: 1px solid white;
+  border-radius: 12px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 11px;
+  box-shadow: 0 3px 8px #72476722;
+}
+
+.message-bubble.received {
+  border-bottom-left-radius: 2px;
+  background: #fff9;
+}
+
+.message-bubble.sent {
+  margin-left: auto;
+  border-bottom-right-radius: 2px;
+  background: #edafd0;
+}
+
+.message-note {
+  margin-top: 40px;
+  color: #97648a;
+  font-size: 8px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+/* ==========================================
+   LAYOUT REFINEMENT — SPACING & TYPOGRAPHY
+========================================== */
+
+/* Consistent text rendering */
+.gyaru-site article {
+  min-width: 0;
+}
+
+.gyaru-site button {
+  line-height: 1.35;
+}
+
+/* PROFILE */
+.gyaru-profile {
+  padding: 38px 19px 42px;
+}
+
+.profile-sticker {
+  width: 76px;
+  height: 76px;
+  margin-bottom: 12px;
+  flex-shrink: 0;
+}
+
+.gyaru-profile h2 {
+  margin: 0 0 9px;
+  font-size: clamp(19px, 2vw, 23px);
+  line-height: 1.08;
+}
+
+.gyaru-profile p {
+  margin: 0;
+  max-width: 100%;
+  font-size: 10px;
+  line-height: 1.55;
+  overflow-wrap: break-word;
+}
+
+.profile-bottom {
+  bottom: 10px;
+  padding-top: 7px;
+}
+
+/* MUSIC PLAYER */
+.gyaru-player {
+  gap: clamp(15px, 2vw, 28px);
+  padding: 43px 20px 30px;
+}
+
+.cd-disc {
+  width: clamp(115px, 14vw, 165px);
+  height: clamp(115px, 14vw, 165px);
+}
+
+.player-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.player-info > span {
+  display: block;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.player-info h2 {
+  margin: 9px 0 12px;
+  font-size: clamp(23px, 2.5vw, 30px);
+  line-height: 1.05;
+}
+
+.player-control {
+  margin: 10px 0 10px;
+}
+
+.player-serial {
+  bottom: 9px;
+}
+
+/* PHONE */
+.gyaru-phone {
+  padding: 42px 12px 16px;
+  gap: 0;
+}
+
+.flip-phone {
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.phone-caption {
+  margin-top: 17px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.phone-charms {
+  top: 39px;
+  right: 16px;
+}
+
+/* CINEMA */
+.gyaru-cinema {
+  padding: 43px 16px 16px;
+}
+
+.cinema-ticket {
+  width: 100%;
+  min-height: 140px;
+  margin: 7px 0 0;
+  grid-template-columns: minmax(0, 1fr) 58px;
+  transform: rotate(-1deg);
+}
+
+.ticket-left {
+  min-width: 0;
+  padding: 12px 10px;
+}
+
+.ticket-left h2 {
+  margin: 10px 0;
+  font-size: clamp(19px, 2vw, 23px);
+  line-height: 1;
+}
+
+.ticket-left small {
+  display: block;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.ticket-right {
+  min-width: 0;
+  padding: 8px 3px;
+}
+
+.ticket-right strong {
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+.cinema-link {
+  margin-top: 17px;
+  line-height: 1.4;
+}
+
+/* BOOKS */
+.gyaru-books {
+  gap: clamp(12px, 2vw, 23px);
+  padding: 43px 19px 18px;
+}
+
+.books-display {
+  flex-shrink: 0;
+  gap: 4px;
+  padding-left: 4px;
+}
+
+.book {
+  width: 32px;
+  font-size: 8px;
+}
+
+.books-caption {
+  min-width: 0;
+}
+
+.books-caption h2 {
+  font-size: clamp(19px, 2.1vw, 24px);
+  line-height: 1.08;
+  margin-bottom: 14px;
+}
+
+.books-caption button {
+  white-space: nowrap;
+}
+
+/* WATCHLIST */
+.gyaru-watchlist {
+  padding: 43px 15px 15px;
+}
+
+.watchlist-heading {
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 13px;
+  font-size: 7px;
+}
+
+.watchlist-line {
+  grid-template-columns: 20px minmax(0, 1fr) 12px;
+  gap: 4px;
+  padding: 12px 0;
+  font-size: 7px;
+  line-height: 1.45;
+}
+
+.watchlist-line strong {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.gyaru-watchlist > button {
+  margin-top: 14px;
+}
+
+/* EDITORIAL */
+.gyaru-editorial {
+  padding: 30px 55px;
+}
+
+.editorial-copy {
+  min-width: 0;
+}
+
+.editorial-copy > span {
+  display: block;
+  line-height: 1.6;
+}
+
+.editorial-copy h2 {
+  margin: 12px 0;
+  font-size: clamp(38px, 5.5vw, 65px);
+  line-height: .95;
+}
+
+.editorial-copy p {
+  line-height: 1.6;
+}
+
+/* FOOTER */
+.gyaru-footer {
+  flex-wrap: wrap;
+  line-height: 1.7;
+}
+
+.gyaru-footer > span {
+  text-align: center;
+}
+
+/* PHONE POPUP */
+.phone-device-screen {
+  min-height: 465px;
+  padding: 17px;
+}
+
+.phone-welcome {
+  margin: 32px 0 24px;
+}
+
+.phone-welcome h2 {
+  line-height: 1;
+  margin: 10px 0;
+}
+
+.phone-welcome p {
+  margin: 8px 0 0;
+  line-height: 1.6;
+}
+
+.phone-app-grid {
+  gap: 17px 8px;
+  margin-top: 27px;
+}
+
+.phone-app-grid small {
+  line-height: 1.5;
+}
+
+.phone-messages h2 {
+  margin: 30px 0 24px;
+}
+
+.message-bubble {
+  line-height: 1.5;
+}
+
+.message-note {
+  margin-top: 35px;
+}
+
+/* ==========================================
+   INTERMEDIATE SCREEN WIDTHS
+========================================== */
+
+@media (max-width: 1000px) {
+  .gyaru-collage {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
+    gap: 14px;
+  }
+
+  .gyaru-collage article {
+    grid-column: auto;
+    grid-row: auto;
+    min-height: 250px;
+  }
+
+  .gyaru-editorial {
+    grid-column: 1 / -1;
+    min-height: 225px;
+  }
+
+  .gyaru-player {
+    gap: 16px;
+  }
+
+  .cd-disc {
+    width: 125px;
+    height: 125px;
+  }
+
+  .gyaru-profile {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+}
+
+/* ==========================================
+   MOBILE REFINEMENT
+========================================== */
+
+@media (max-width: 560px) {
+  .gyaru-collage {
+    gap: 15px;
+  }
+
+  .gyaru-collage article {
+    min-height: 245px;
+  }
+
+  .gyaru-profile {
+    padding: 42px 22px 42px;
+  }
+
+  .gyaru-player {
+    padding: 45px 20px 35px;
+    gap: 17px;
+  }
+
+  .cd-disc {
+    width: 145px;
+    height: 145px;
+  }
+
+  .player-info {
+    width: 100%;
+  }
+
+  .player-info h2 {
+    font-size: 29px;
+  }
+
+  .gyaru-phone {
+    padding-top: 43px;
+  }
+
+  .gyaru-cinema {
+    padding: 43px 20px 18px;
+  }
+
+  .cinema-ticket {
+    max-width: 340px;
+    margin: 10px auto 0;
+  }
+
+  .gyaru-books {
+    justify-content: center;
+    gap: 20px;
+    padding: 45px 15px 20px;
+  }
+
+  .books-display {
+    gap: 5px;
+  }
+
+  .books-caption h2 {
+    font-size: 23px;
+  }
+
+  .gyaru-watchlist {
+    padding: 43px 20px 20px;
+  }
+
+  .watchlist-line {
+    padding: 13px 0;
+    font-size: 8px;
+  }
+
+  .gyaru-editorial {
+    padding: 38px 20px;
+    gap: 5px;
+  }
+
+  .editorial-copy h2 {
+    font-size: 39px;
+  }
+
+  .editorial-decoration {
+    flex-shrink: 0;
+  }
+
+  .phone-device {
+    max-height: 92vh;
+    overflow-y: auto;
+  }
+}
+/* CONTENT-FIRST HEIGHT FIX */
+
+.gyaru-collage article {
+  min-width: 0;
+  min-height: 0;
+}
+
+/* Give each composition enough breathing room */
+.gyaru-profile {
+  min-height: 300px;
+}
+
+.gyaru-player {
+  min-height: 300px;
+}
+
+.gyaru-phone {
+  min-height: 300px;
+}
+
+.gyaru-cinema {
+  min-height: 255px;
+}
+
+.gyaru-books {
+  min-height: 255px;
+}
+
+.gyaru-watchlist {
+  min-height: 255px;
+}
+
+.gyaru-editorial {
+  min-height: 235px;
+}
+
+/* Allow text to wrap instead of disappearing */
+.gyaru-site article p,
+.gyaru-site article h2,
+.gyaru-site article strong {
+  overflow-wrap: break-word;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .gyaru-collage {
+    grid-template-rows: auto;
+  }
+
+  .gyaru-collage article {
+    min-height: 280px;
+  }
+
+  .gyaru-editorial {
+    min-height: 235px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+  .gyaru-collage {
+    grid-template-rows: auto;
+  }
+
+  .gyaru-collage article {
+    min-height: 270px;
+  }
+
+  .gyaru-editorial {
+    min-height: 235px;
+  }
+}
+/* TELEVISION DEPARTMENT */
+
+.gyaru-watchlist {
+  background:
+    radial-gradient(ellipse at 50% 55%, rgba(255, 126, 173, .13), transparent 65%),
+    #21121f;
+  padding: 43px 15px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tv-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'DM Mono', monospace;
+  font-size: 7px;
+  letter-spacing: 1px;
+  margin: 8px 0 10px;
+}
+
+.tv-live {
+  color: #ff719e;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tv-live i {
+  width: 6px;
+  height: 6px;
+  background: #ff477e;
+  border-radius: 50%;
+  box-shadow: 0 0 9px #ff477e;
+  animation: tv-blink 1s infinite;
+}
+
+@keyframes tv-blink {
+  50% { opacity: .25; }
+}
+
+.mini-tv-link {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mini-tv {
+  background: linear-gradient(145deg, #f7c7d8, #b87998 45%, #754b68);
+  border: 2px solid #f5d3df;
+  border-radius: 25px;
+  padding: 10px;
+  box-shadow:
+    inset 2px 2px 5px rgba(255,255,255,.7),
+    inset -3px -4px 8px rgba(50,10,35,.4),
+    0 8px 18px rgba(0,0,0,.35);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 48px;
+  gap: 9px;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.mini-tv-link:hover .mini-tv {
+  transform: translateY(-4px) rotate(-1deg);
+  box-shadow: 0 13px 25px rgba(255,100,160,.2);
+}
+
+.tv-screen {
+  min-height: 145px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  background:
+    radial-gradient(ellipse at center, #65304e 0%, #25101f 75%);
+  border: 3px solid #563044;
+  box-shadow: inset 0 0 20px #000;
+  color: #ffd8e8;
+  padding: 10px;
+}
+
+.tv-scanlines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 3px,
+    rgba(255,255,255,.045) 4px
+  );
+}
+
+.tv-channel,
+.tv-screen-time {
+  position: absolute;
+  font: 7px 'DM Mono', monospace;
+  color: #ffb5d0;
+}
+
+.tv-channel { top: 9px; left: 10px; }
+.tv-screen-time { bottom: 9px; right: 10px; }
+
+.tv-screen-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 15px 5px;
+}
+
+.tv-screen-content > span {
+  font: 7px 'DM Mono', monospace;
+  letter-spacing: 2px;
+  color: #ff9fc4;
+  margin-bottom: 8px;
+}
+
+.tv-screen-content strong {
+  font: 900 23px/.88 'Zen Maru Gothic', sans-serif;
+  letter-spacing: -1px;
+  text-shadow: 0 0 15px rgba(255,130,180,.5);
+}
+
+.tv-screen-content strong i {
+  color: #ff91bb;
+}
+
+.tv-screen-content small {
+  font: 6px 'DM Mono', monospace;
+  letter-spacing: .5px;
+  margin-top: 9px;
+  color: #e9b7ce;
+}
+
+.tv-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.tv-brand {
+  font: 700 7px 'DM Mono', monospace;
+  color: #522b43;
+}
+
+.tv-knobs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tv-knobs i {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #fff0f5, #a85d80);
+  border: 2px solid #87506c;
+  box-shadow: 1px 2px 3px rgba(0,0,0,.4);
+}
+
+.tv-speaker {
+  display: flex;
+  gap: 3px;
+}
+
+.tv-speaker i {
+  width: 3px;
+  height: 17px;
+  border-radius: 4px;
+  background: #75435d;
+}
+
+.tv-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  margin-top: 13px;
+}
+
+.tv-bottom div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.tv-bottom div span {
+  font: 7px 'DM Mono', monospace;
+  color: #d58aa9;
+}
+
+.tv-bottom div strong {
+  font: 700 8px 'DM Mono', monospace;
+  color: #f8dce8;
+  overflow-wrap: anywhere;
+}
+
+.tv-bottom > a {
+  flex-shrink: 0;
+  font: 8px 'DM Mono', monospace;
+  color: #ff9fc4;
+  text-decoration: none;
+  border: 1px solid #a95b7d;
+  padding: 7px 9px;
+  transition: .2s;
+}
+
+.tv-bottom > a:hover {
+  background: #ff9fc4;
+  color: #24101f;
+}
+
+@media(max-width:560px) {
+  .mini-tv {
+    max-width: 350px;
+    margin: auto;
+  }
+}
