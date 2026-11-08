@@ -19,7 +19,7 @@ const LINKS = {
   books: 'https://www.goodreads.com/user/show/204937790-shreya-mishra',
 }
 
-export default function Interface({ onEnter: _onEnter }: InterfaceProps) {
+export default function Interface({}: InterfaceProps) {
   const [phoneOpen, setPhoneOpen] = useState(false)
   const [phoneApp, setPhoneApp] = useState<PhoneApp>(null)
   const [secretOpen, setSecretOpen] = useState(false)
