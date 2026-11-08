@@ -19,7 +19,7 @@ const LINKS = {
   books: 'https://www.goodreads.com/user/show/204937790-shreya-mishra',
 }
 
-export default function Interface({ onEnter }: InterfaceProps) {
+export default function Interface({ onEnter: _onEnter }: InterfaceProps) {
   const [phoneOpen, setPhoneOpen] = useState(false)
   const [phoneApp, setPhoneApp] = useState<PhoneApp>(null)
   const [secretOpen, setSecretOpen] = useState(false)
@@ -49,8 +49,6 @@ export default function Interface({ onEnter }: InterfaceProps) {
     <div className="gyaru-site">
       <div className="gyaru-wallpaper" />
 
-      {/* TOPBAR */}
-
       <header className="gyaru-topbar">
         <span>PERSONAL ♡</span>
         <span>somewhere on the world wide web</span>
@@ -61,9 +59,6 @@ export default function Interface({ onEnter }: InterfaceProps) {
       </header>
 
       <main className="gyaru-main">
-
-        {/* MASTHEAD */}
-
         <div className="gyaru-masthead">
           <div className="masthead-side">
             <span>PERSONAL WEBSITE</span>
@@ -90,8 +85,6 @@ export default function Interface({ onEnter }: InterfaceProps) {
           </div>
         </div>
 
-        {/* MARQUEE */}
-
         <div className="gyaru-marquee">
           <div className="marquee-track">
             {Array.from({ length: 4 }).map((_, i) => (
@@ -106,12 +99,7 @@ export default function Interface({ onEnter }: InterfaceProps) {
           </div>
         </div>
 
-        {/* MAIN COLLAGE */}
-
         <section className="gyaru-collage">
-
-          {/* PERSONAL ID */}
-
           <article className="gyaru-profile">
             <div className="profile-label">
               YOUR FRIENDLY INTERNET PERSON
@@ -155,8 +143,6 @@ export default function Interface({ onEnter }: InterfaceProps) {
               not a comprehensive biography.
             </p>
           </article>
-
-          {/* MUSIC */}
 
           <article className="gyaru-player">
             <div className="section-label">
@@ -208,8 +194,6 @@ export default function Interface({ onEnter }: InterfaceProps) {
             </span>
           </article>
 
-          {/* FLIP PHONE */}
-
           <article className="gyaru-phone">
             <div className="section-label">
               YOU HAVE 3 NEW NOTIFICATIONS
@@ -255,8 +239,6 @@ export default function Interface({ onEnter }: InterfaceProps) {
               you should probably answer.
             </span>
           </article>
-
-          {/* CINEMA */}
 
           <article className="gyaru-cinema">
             <div className="section-label">
@@ -308,8 +290,6 @@ export default function Interface({ onEnter }: InterfaceProps) {
               </a>
             </div>
           </article>
-
-          {/* BOOKSHOP */}
 
           <article className="gyaru-books">
             <div className="section-label">
@@ -368,8 +348,6 @@ export default function Interface({ onEnter }: InterfaceProps) {
               </a>
             </div>
           </article>
-
-          {/* TV */}
 
           <article className="gyaru-watchlist">
             <div className="section-label">
@@ -451,10 +429,7 @@ export default function Interface({ onEnter }: InterfaceProps) {
             </div>
           </article>
 
-          {/* SCRAPBOOK */}
-
           <article className="gyaru-editorial">
-
             <div className="scrapbook-heading">
               <span className="editorial-number">
                 A LITTLE BIT OF EVERYTHING ♡
@@ -480,7 +455,6 @@ export default function Interface({ onEnter }: InterfaceProps) {
             </div>
 
             <div className="scrapbook-board">
-
               <div className="scrap-note scrap-note-one">
                 <span>THINGS TO REMEMBER</span>
 
@@ -553,22 +527,16 @@ export default function Interface({ onEnter }: InterfaceProps) {
               <div className="scrap-sticker scrap-sticker-two">
                 ౨ৎ brb
               </div>
-
             </div>
 
             <div className="scrapbook-bottom">
               <span>END OF THE CURRENT BRAIN DUMP</span>
               <span>MORE LATER ♡</span>
             </div>
-
           </article>
-
         </section>
 
-        {/* INTERNET DETRITUS */}
-
         <section className="gyaru-lower">
-
           <div className="lower-heading">
             <span>
               ✳ THINGS THAT DIDN'T FIT ANYWHERE ✳
@@ -578,7 +546,6 @@ export default function Interface({ onEnter }: InterfaceProps) {
           </div>
 
           <div className="lower-grid">
-
             <div className="lower-note">
               <span>FROM THE NOTES APP</span>
 
@@ -602,11 +569,8 @@ export default function Interface({ onEnter }: InterfaceProps) {
 
               <small>this happens a lot</small>
             </div>
-
           </div>
         </section>
-
-        {/* FOOTER */}
 
         <footer className="gyaru-footer">
           <div>
@@ -629,8 +593,6 @@ export default function Interface({ onEnter }: InterfaceProps) {
           </div>
         )}
 
-        {/* PHONE INTERFACE */}
-
         {phoneOpen && (
           <div
             className="phone-overlay"
@@ -641,14 +603,12 @@ export default function Interface({ onEnter }: InterfaceProps) {
             }}
           >
             <div className="phone-device">
-
               <div className="phone-device-top">
                 <span>SHREYA'S PHONE ♡</span>
                 <button onClick={closePhone}>×</button>
               </div>
 
               <div className="phone-device-screen">
-
                 {phoneApp === null && (
                   <>
                     <div className="phone-status">
@@ -667,7 +627,6 @@ export default function Interface({ onEnter }: InterfaceProps) {
                     </div>
 
                     <div className="phone-app-grid">
-
                       <button onClick={() => openPhoneApp('messages')}>
                         <span className="app-icon pink">✉</span>
                         <small>messages</small>
@@ -697,7 +656,6 @@ export default function Interface({ onEnter }: InterfaceProps) {
                         <span className="app-icon lavender">♡</span>
                         <small>other</small>
                       </button>
-
                     </div>
 
                     <div className="phone-home-footer">
@@ -708,7 +666,6 @@ export default function Interface({ onEnter }: InterfaceProps) {
 
                 {phoneApp === 'messages' && (
                   <div className="phone-messages">
-
                     <div className="phone-screen-heading">
                       <button onClick={() => setPhoneApp(null)}>
                         ← BACK
@@ -734,10 +691,8 @@ export default function Interface({ onEnter }: InterfaceProps) {
                     <p className="message-note">
                       SEEN ♡
                     </p>
-
                   </div>
                 )}
-
               </div>
 
               <div className="phone-device-bottom">
@@ -751,11 +706,9 @@ export default function Interface({ onEnter }: InterfaceProps) {
                   CLOSE
                 </button>
               </div>
-
             </div>
           </div>
         )}
-
       </main>
     </div>
   )
