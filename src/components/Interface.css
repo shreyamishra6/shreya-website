@@ -1,27 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&family=Zen+Maru+Gothic:wght@500;700;900&display=swap');
-
-:root {
-  font-family: 'DM Mono', monospace;
-}
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=M+PLUS+Rounded+1c:wght@500;700;800;900&family=Yusei+Magic&family=Zen+Maru+Gothic:wght@500;700;900&display=swap');
 
 * {
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  background: #1b1018;
+/* Keep all gyaru styling inside the creative page */
+.gyaru-site {
+  font-family: 'DM Mono', monospace;
 }
 
-button,
-a {
+.gyaru-site button,
+.gyaru-site a {
   -webkit-tap-highlight-color: transparent;
 }
 
-button {
+.gyaru-site button {
   font-family: inherit;
 }
-
 /* ==========================================
    SHREYA.EXE — 2004 TOKYO GYARU EDITION
 ========================================== */
@@ -2162,4 +2157,1261 @@ button {
     max-width: 350px;
     margin: auto;
   }
+}
+/* ==========================================
+   GYARU HOMEPAGE — FINAL ART DIRECTION
+   2004 / SHIBUYA / PERSONAL WEB
+========================================== */
+
+.gyaru-site {
+  --cherry: #ed347f;
+  --bubblegum: #ffadd2;
+  --silver: #e9e6ef;
+  --chrome: #c4bdce;
+  --ink: #291522;
+  --cream: #fff5ed;
+}
+
+/* WALLPAPER */
+
+.gyaru-wallpaper {
+  background:
+    radial-gradient(ellipse at 50% 10%, #a73b70 0%, transparent 48%),
+    radial-gradient(ellipse at 10% 90%, #65304f 0%, transparent 40%),
+    linear-gradient(135deg, #21121d, #39202f 55%, #17111c);
+}
+
+.gyaru-wallpaper::before {
+  opacity: .12;
+  background-image:
+    radial-gradient(#ffd6e9 1px, transparent 1px);
+  background-size: 4px 4px;
+}
+
+.gyaru-wallpaper::after {
+  content: "SHREYA ★ SHREYA ♡ SHREYA ★";
+  color: #ffffff09;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  letter-spacing: 8px;
+}
+
+/* TOP BAR */
+
+.gyaru-topbar {
+  height: 37px;
+  background: linear-gradient(
+    180deg,
+    #fff 0%,
+    #f4eaf2 12%,
+    #c8c1d1 35%,
+    #777183 65%,
+    #302a38 100%
+  );
+  border-bottom: 1px solid #ffafd5;
+}
+
+/* MASTHEAD */
+
+.gyaru-masthead {
+  border-bottom: 1px solid #ffadd266;
+  padding-top: 18px;
+  padding-bottom: 30px;
+}
+
+.masthead-center h1 {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: 900;
+  letter-spacing: -9px;
+  filter:
+    drop-shadow(0 2px 0 #fff)
+    drop-shadow(0 5px 0 #a52b65)
+    drop-shadow(0 8px 0 #341126)
+    drop-shadow(0 0 25px #ff72b477);
+}
+
+.masthead-kicker {
+  font-family: 'DM Mono', monospace;
+  letter-spacing: 3px;
+}
+
+.masthead-subtitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+/* MARQUEE */
+
+.gyaru-marquee {
+  border: 1px solid #ffb8d8;
+  border-radius: 3px;
+  background: linear-gradient(
+    90deg,
+    #d92575,
+    #ff75ad,
+    #f43b8e,
+    #b91d69
+  );
+  box-shadow:
+    0 3px 0 #681b46,
+    0 5px 14px #0005,
+    inset 0 1px 0 #ffffff99;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+}
+
+/* CARDS */
+
+.gyaru-collage article {
+  border: 2px solid #fff;
+  border-radius: 3px;
+  box-shadow:
+    0 4px 0 #a34c79,
+    0 8px 20px #0006,
+    inset 0 1px 0 white;
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+.gyaru-collage article:hover {
+  box-shadow:
+    0 5px 0 #a34c79,
+    0 12px 25px #0008,
+    inset 0 1px 0 white;
+}
+
+/* SECTION LABELS */
+
+.section-label,
+.profile-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* PROFILE — PURIKURA FEEL */
+
+.gyaru-profile {
+  background:
+    radial-gradient(circle at 90% 15%, #fff9 0 3px, transparent 4px),
+    radial-gradient(circle at 10% 75%, #fff6 0 2px, transparent 3px),
+    linear-gradient(145deg, #ffe0ed, #ff9fc9 55%, #e45b9c);
+}
+
+.profile-sticker {
+  border: 4px solid white;
+  box-shadow:
+    0 0 0 2px #e34e98,
+    0 0 0 5px #ffffff88,
+    0 6px 16px #9a205566;
+}
+
+.gyaru-profile h2 {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.gyaru-profile p {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  letter-spacing: .3px;
+}
+
+/* CD PLAYER */
+
+.gyaru-player {
+  background:
+    radial-gradient(circle at 25% 25%, #fff 0 1px, transparent 2px),
+    radial-gradient(ellipse at 30% 45%, #fff8, transparent 60%),
+    linear-gradient(135deg, #f4e9f2, #c7c4d7 50%, #eee0eb);
+}
+
+.cd-disc {
+  box-shadow:
+    0 0 0 4px #fff,
+    0 0 0 6px #c8a9c2,
+    0 8px 20px #30203866,
+    inset 0 0 0 2px #ffffff99;
+}
+
+.player-info h2 {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: 900;
+}
+
+.player-control {
+  border-radius: 20px;
+  border: 2px solid white;
+  background: linear-gradient(
+    180deg,
+    #ffb5d9,
+    #ed4a98 60%,
+    #bc286f
+  );
+  box-shadow:
+    0 3px 0 #81234e,
+    inset 0 1px 2px white;
+}
+
+/* FLIP PHONE — DECORATED */
+
+.flip-phone {
+  border: 3px solid #fff;
+  border-radius: 20px 20px 14px 14px;
+  background: linear-gradient(
+    110deg,
+    #f8dbe9,
+    #aaa2b9 25%,
+    #fff0f7 48%,
+    #a18aa6 75%,
+    #f8e2ef
+  );
+  box-shadow:
+    0 0 0 2px #c18bab,
+    0 0 0 4px #ffffff77,
+    0 10px 20px #48304777,
+    inset 0 0 8px white;
+}
+
+.phone-charms {
+  font-size: 19px;
+  filter: drop-shadow(0 2px 2px #8d356a66);
+}
+
+.phone-screen {
+  border-color: #66506b;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      #d5eddd 0 2px,
+      #b8d9c8 3px
+    );
+}
+
+.phone-keypad span {
+  border-radius: 9px;
+  background: linear-gradient(#fff, #e4cddd);
+  box-shadow:
+    0 2px 2px #55465d66,
+    inset 0 1px 1px white;
+}
+
+/* CINEMA TICKET */
+
+.gyaru-cinema {
+  background:
+    radial-gradient(circle at 90% 10%, #ff8cbd55, transparent 45%),
+    linear-gradient(145deg, #7c173e, #260e22);
+}
+
+.cinema-ticket {
+  border: 2px solid white;
+  box-shadow:
+    0 5px 0 #c18ba5,
+    0 8px 15px #0005;
+}
+
+.cinema-link {
+  border-radius: 2px;
+  font-weight: 500;
+  letter-spacing: .5px;
+}
+
+/* BOOKS */
+
+.gyaru-books {
+  background:
+    radial-gradient(circle at 85% 15%, #fff9 0 2px, transparent 3px),
+    linear-gradient(135deg, #fff5eb, #f4d9e3 55%, #d8c1dc);
+}
+
+.books-caption h2 {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: 900;
+}
+
+.book {
+  border-radius: 2px 2px 0 0;
+  box-shadow:
+    2px 3px 5px #59304466,
+    inset 2px 0 3px #ffffff44;
+}
+
+.books-caption button {
+  border-radius: 2px;
+  box-shadow: 0 2px 0 #a65a7d;
+}
+
+/* TELEVISION */
+
+.gyaru-watchlist {
+  background:
+    radial-gradient(ellipse at 50% 55%, #ff7eada0, transparent 65%),
+    linear-gradient(145deg, #37202f, #21121f);
+}
+
+.gyaru-watchlist .section-label {
+  color: #ffc6df;
+}
+
+.tv-heading {
+  color: #ffe3ef;
+}
+
+.tv-bottom > a {
+  border-color: #e28ab0;
+}
+
+/* EDITORIAL */
+
+.gyaru-editorial {
+  background:
+    radial-gradient(circle at 20% 20%, #fff9 0 2px, transparent 3px),
+    radial-gradient(circle at 85% 75%, #fff9 0 2px, transparent 3px),
+    linear-gradient(110deg, #fff0e7, #f4cadd 50%, #c5c1d9);
+}
+
+.editorial-copy h2 {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: 900;
+}
+
+.editorial-decoration span:nth-child(1) {
+  color: #ed438e;
+  text-shadow:
+    0 2px 0 white,
+    0 5px 12px #9b286755;
+}
+
+.editorial-decoration span:nth-child(2) {
+  color: #fff;
+  text-shadow: 0 2px 8px #d33c8c88;
+}
+
+/* FOOTER */
+
+.gyaru-footer {
+  border-top: 1px solid #ffadd288;
+}
+
+.gyaru-footer button {
+  border: 1px solid white;
+  border-radius: 2px;
+  background: linear-gradient(#ffabd1, #e33b8c 65%, #a92368);
+  box-shadow:
+    0 3px 0 #661b46,
+    inset 0 1px 0 #ffffffaa;
+}
+
+/* PHONE POPUP */
+
+.phone-device {
+  border-radius: 30px;
+  box-shadow:
+    0 0 0 3px #81758c,
+    0 0 0 6px #f7c8df,
+    0 25px 90px #000b,
+    inset 0 0 12px white;
+}
+
+.app-icon {
+  border-radius: 15px;
+  box-shadow:
+    0 4px 8px #6b426344,
+    inset 0 1px 2px #ffffffaa;
+}
+
+.phone-welcome h2 {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: 900;
+}
+
+.phone-device-screen {
+  background:
+    radial-gradient(circle at 90% 10%, #fff9, transparent 30%),
+    linear-gradient(145deg, #fff0f6, #e9d9f0 55%, #d0e4e8);
+}
+
+/* LITTLE INTERACTION DETAILS */
+
+.gyaru-site button {
+  transition:
+    transform .18s ease,
+    filter .18s ease,
+    box-shadow .18s ease;
+}
+
+.gyaru-site button:active {
+  transform: translateY(2px);
+}
+
+.gyaru-site a {
+  transition: color .2s ease;
+}
+
+@media (max-width: 560px) {
+  .masthead-center h1 {
+    letter-spacing: -5px;
+  }
+
+  .gyaru-topbar {
+    letter-spacing: .5px;
+  }
+}
+/* =========================================
+   SCRAPBOOK EXPANSION
+   ========================================= */
+
+.gyaru-site {
+  --scrap-pink: #ff75b7;
+  --scrap-hot: #ff278e;
+  --scrap-cream: #fff5ed;
+  --scrap-purple: #bba3d8;
+  --scrap-ink: #281a29;
+}
+
+.gyaru-site .gyaru-topbar {
+  position: relative;
+  z-index: 5;
+}
+
+.gyaru-site .topbar-links {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.gyaru-site .topbar-links a {
+  color: inherit;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+.gyaru-site .topbar-links a:hover {
+  color: var(--scrap-hot);
+}
+
+.gyaru-site .gyaru-masthead {
+  position: relative;
+}
+
+.gyaru-site .masthead-center h1 {
+  text-shadow: 3px 3px 0 rgba(255, 117, 183, .25);
+}
+
+.gyaru-site .masthead-kicker {
+  transform: rotate(-2deg);
+}
+
+/* little scattered details */
+
+.gyaru-site .gyaru-collage {
+  position: relative;
+}
+
+.gyaru-site .gyaru-profile,
+.gyaru-site .gyaru-player,
+.gyaru-site .gyaru-phone,
+.gyaru-site .gyaru-cinema,
+.gyaru-site .gyaru-books,
+.gyaru-site .gyaru-watchlist,
+.gyaru-site .gyaru-editorial {
+  position: relative;
+  overflow: visible;
+}
+
+.gyaru-site .gyaru-profile::after {
+  content: '♡';
+  position: absolute;
+  top: -17px;
+  right: 18px;
+  color: var(--scrap-hot);
+  font-size: 30px;
+  transform: rotate(15deg);
+  pointer-events: none;
+}
+
+.gyaru-site .gyaru-player::after {
+  content: 'now playing ♪';
+  position: absolute;
+  right: -13px;
+  bottom: 22px;
+  padding: 6px 10px;
+  background: #fff0f6;
+  border: 1px solid #e9a5c7;
+  color: #a92b69;
+  font-size: 9px;
+  transform: rotate(-7deg);
+  box-shadow: 2px 3px 0 rgba(0, 0, 0, .08);
+}
+
+.gyaru-site .gyaru-phone::after {
+  content: '౨ৎ';
+  position: absolute;
+  top: 35px;
+  right: 7px;
+  color: var(--scrap-hot);
+  font-size: 25px;
+  transform: rotate(15deg);
+  pointer-events: none;
+}
+
+.gyaru-site .gyaru-books::after {
+  content: 'to be read ♡';
+  position: absolute;
+  top: 45px;
+  right: -9px;
+  background: #fff5dc;
+  padding: 7px 10px;
+  font-size: 9px;
+  transform: rotate(8deg);
+  box-shadow: 2px 3px 0 rgba(0, 0, 0, .1);
+}
+
+/* scrapbook section */
+
+.gyaru-site .gyaru-editorial {
+  min-height: 560px;
+  padding-bottom: 25px;
+}
+
+.gyaru-site .editorial-number {
+  display: inline-block;
+  transform: rotate(-5deg);
+  background: #fff0f6;
+  color: #d62c7e;
+  padding: 6px 10px;
+  border: 1px solid #e8a3c2;
+  box-shadow: 2px 3px 0 rgba(0, 0, 0, .08);
+}
+
+.gyaru-site .editorial-copy h2 {
+  line-height: .9;
+}
+
+.gyaru-site .scrapbook-board {
+  position: relative;
+  min-height: 300px;
+  margin-top: 25px;
+  padding: 15px;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,.55) 0 2px, transparent 3px),
+    radial-gradient(circle at 80% 65%, rgba(255,255,255,.5) 0 2px, transparent 3px),
+    #e9d9e5;
+  background-size: 30px 30px, 42px 42px, auto;
+  border: 1px solid rgba(80, 45, 70, .15);
+}
+
+.gyaru-site .scrap-note {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 13px;
+  background: #fff9e9;
+  color: #332332;
+  box-shadow: 3px 5px 10px rgba(50, 20, 40, .16);
+  font-family: 'DM Mono', monospace;
+}
+
+.gyaru-site .scrap-note span {
+  font-size: 8px;
+  letter-spacing: .1em;
+  color: #a34d78;
+}
+
+.gyaru-site .scrap-note strong {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 15px;
+  line-height: 1.25;
+}
+
+.gyaru-site .scrap-note small {
+  align-self: flex-end;
+  font-size: 10px;
+}
+
+.gyaru-site .scrap-note-one {
+  top: 14px;
+  left: 12px;
+  width: 145px;
+  transform: rotate(-7deg);
+  z-index: 2;
+}
+
+.gyaru-site .scrap-note-two {
+  right: 10px;
+  bottom: 18px;
+  width: 155px;
+  transform: rotate(5deg);
+  z-index: 3;
+  background: #fff0f6;
+}
+
+.gyaru-site .scrap-photo {
+  position: absolute;
+  width: 125px;
+  padding: 7px 7px 24px;
+  background: #fff;
+  box-shadow: 3px 5px 12px rgba(40, 20, 35, .2);
+}
+
+.gyaru-site .scrap-photo-one {
+  top: 45px;
+  left: 42%;
+  transform: rotate(8deg);
+  z-index: 3;
+}
+
+.gyaru-site .scrap-photo-two {
+  bottom: 20px;
+  left: 22%;
+  transform: rotate(-9deg);
+  z-index: 2;
+}
+
+.gyaru-site .scrap-photo-art {
+  height: 115px;
+  display: grid;
+  place-items: center;
+  font-size: 40px;
+}
+
+.gyaru-site .art-one {
+  background:
+    radial-gradient(circle at 65% 30%, #fff5fa 0 13px, transparent 14px),
+    linear-gradient(145deg, #ffb4d3, #bd8fbe);
+  color: #fff;
+}
+
+.gyaru-site .art-two {
+  background:
+    radial-gradient(circle at 35% 65%, #fff2e7 0 20px, transparent 21px),
+    linear-gradient(145deg, #b7a7d8, #e6a9c6);
+  color: #fff;
+}
+
+.gyaru-site .scrap-photo > small {
+  display: block;
+  padding-top: 7px;
+  color: #594353;
+  font-family: 'DM Mono', monospace;
+  font-size: 8px;
+  text-align: center;
+}
+
+.gyaru-site .scrap-sticker {
+  position: absolute;
+  z-index: 4;
+  padding: 9px 12px;
+  border-radius: 50%;
+  background: #ff5da7;
+  color: white;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 12px;
+  box-shadow: 2px 4px 0 rgba(80, 30, 60, .15);
+}
+
+.gyaru-site .scrap-sticker-one {
+  top: 5px;
+  right: 12px;
+  transform: rotate(12deg);
+}
+
+.gyaru-site .scrap-sticker-two {
+  bottom: 15px;
+  left: 8px;
+  background: #b7a0d6;
+  transform: rotate(-10deg);
+}
+
+.gyaru-site .scrap-mini {
+  position: absolute;
+  top: 170px;
+  right: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 9px;
+  background: #fff;
+  color: #503b50;
+  font-size: 9px;
+  transform: rotate(-4deg);
+  box-shadow: 2px 3px 8px rgba(0,0,0,.1);
+}
+
+.gyaru-site .scrap-mini strong {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 12px;
+}
+
+.gyaru-site .scrapbook-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  align-items: center;
+  margin-top: 15px;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+}
+
+.gyaru-site .scrapbook-bottom a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+/* little notes beneath the main collage */
+
+.gyaru-site .gyaru-lower {
+  margin: 35px 0;
+}
+
+.gyaru-site .lower-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 14px;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .08em;
+}
+
+.gyaru-site .lower-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 17px;
+  align-items: stretch;
+}
+
+.gyaru-site .lower-note,
+.gyaru-site .lower-instagram {
+  position: relative;
+  min-height: 155px;
+  padding: 19px;
+  background: #fffaf5;
+  color: #302331;
+  border: 1px solid #d9cbd7;
+  box-shadow: 3px 4px 0 rgba(70, 40, 60, .09);
+}
+
+.gyaru-site .lower-note:first-child {
+  transform: rotate(-1.5deg);
+}
+
+.gyaru-site .lower-pink {
+  background: #ffe7f1;
+  transform: rotate(1.2deg);
+}
+
+.gyaru-site .lower-note > span,
+.gyaru-site .lower-instagram > span {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .08em;
+}
+
+.gyaru-site .lower-note h3 {
+  margin: 13px 0 8px;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 19px;
+}
+
+.gyaru-site .lower-note p {
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.gyaru-site .lower-note small {
+  display: block;
+  margin-top: 13px;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+}
+
+.gyaru-site .lower-instagram {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 9px;
+  color: white;
+  text-decoration: none;
+  background: linear-gradient(145deg, #f36eae, #9d75bd);
+  transform: rotate(-1deg);
+  transition: transform .2s ease;
+}
+
+.gyaru-site .lower-instagram:hover {
+  transform: rotate(1deg) translateY(-4px);
+}
+
+.gyaru-site .lower-instagram strong {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 26px;
+}
+
+.gyaru-site .lower-instagram small {
+  font-size: 10px;
+}
+
+.gyaru-site .lower-instagram i {
+  position: absolute;
+  top: 10px;
+  right: 17px;
+  font-size: 30px;
+  font-style: normal;
+}
+
+/* buttons and links */
+
+.gyaru-site button,
+.gyaru-site a {
+  cursor: pointer;
+}
+
+.gyaru-site button:focus-visible,
+.gyaru-site a:focus-visible {
+  outline: 2px dashed var(--scrap-hot);
+  outline-offset: 4px;
+}
+
+.gyaru-site .gyaru-footer {
+  position: relative;
+}
+
+/* responsive scrapbook */
+
+@media (max-width: 760px) {
+  .gyaru-site .topbar-links {
+    gap: 8px;
+  }
+
+  .gyaru-site .lower-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gyaru-site .lower-instagram {
+    grid-column: 1 / -1;
+    min-height: 120px;
+  }
+
+  .gyaru-site .scrapbook-board {
+    min-height: 330px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gyaru-site .topbar-links {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+  }
+
+  .gyaru-site .lower-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gyaru-site .lower-instagram {
+    grid-column: auto;
+  }
+
+  .gyaru-site .scrap-photo-one {
+    left: 43%;
+  }
+
+  .gyaru-site .scrap-photo-two {
+    left: 18%;
+  }
+
+  .gyaru-site .scrap-note-two {
+    right: 5px;
+  }
+}
+/* =====================================
+   NEW SECTION WORLDS
+   ===================================== */
+
+/* MUSIC STORE */
+
+.gyaru-site .music-store {
+  position: relative;
+  padding: 15px;
+  margin-top: 12px;
+  background: linear-gradient(145deg, #f9e5ef, #e8d9ec);
+  border: 1px solid #d5b5ce;
+  box-shadow: 4px 5px 0 rgba(50, 20, 50, .12);
+}
+
+.gyaru-site .music-store-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  letter-spacing: .1em;
+}
+
+.gyaru-site .music-store .cd-disc {
+  margin: 22px auto;
+  box-shadow: 0 5px 15px rgba(60, 30, 70, .2);
+}
+
+.gyaru-site .music-tracklist {
+  padding: 12px;
+  background: rgba(255,255,255,.65);
+  border: 1px dashed #c79bb9;
+  font-size: 10px;
+  line-height: 2;
+}
+
+.gyaru-site .music-tracklist > span {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 8px;
+  letter-spacing: .12em;
+  color: #9b547a;
+}
+
+.gyaru-site .music-tracklist b {
+  margin-right: 8px;
+  color: #c34a87;
+}
+
+.gyaru-site .music-store-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-top: 13px;
+}
+
+/* CINEMA CONTACT SHEET */
+
+.gyaru-site .film-lab {
+  padding: 15px;
+  margin-top: 12px;
+  background: #211923;
+  color: #fff0e9;
+  box-shadow: 5px 6px 0 rgba(40, 20, 30, .15);
+}
+
+.gyaru-site .film-lab-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 8px;
+  letter-spacing: .1em;
+  color: #f2b7d1;
+}
+
+.gyaru-site .film-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  padding: 9px 5px;
+  margin: 17px 0;
+  background: #f6e6d8;
+  border-top: 5px dashed #211923;
+  border-bottom: 5px dashed #211923;
+}
+
+.gyaru-site .film-frame {
+  min-height: 125px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 8px;
+  color: white;
+  font-size: 9px;
+}
+
+.gyaru-site .frame-one {
+  background: linear-gradient(145deg, #d67b9e, #6c3e62);
+}
+
+.gyaru-site .frame-two {
+  background: linear-gradient(145deg, #9e8bc3, #493c69);
+}
+
+.gyaru-site .frame-three {
+  background: linear-gradient(145deg, #dfaa80, #895b5a);
+}
+
+.gyaru-site .film-frame strong {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 15px;
+  line-height: 1;
+}
+
+.gyaru-site .film-caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.gyaru-site .film-caption > div > span {
+  font-size: 8px;
+  letter-spacing: .1em;
+  color: #f2b7d1;
+}
+
+.gyaru-site .film-caption h2 {
+  margin: 8px 0 0;
+  font-size: 23px;
+  line-height: .95;
+}
+
+.gyaru-site .film-caption h2 i {
+  color: #f2a8cc;
+}
+
+.gyaru-site .film-rating {
+  color: #ffc2dc;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+/* BOOKSHOP */
+
+.gyaru-site .bookshop-window {
+  margin-top: 12px;
+  padding: 15px;
+  background: #e9d8c4;
+  border: 1px solid #bba48d;
+  box-shadow: inset 0 0 0 5px rgba(255,255,255,.2);
+}
+
+.gyaru-site .bookshop-sign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 10px;
+  background: #704b55;
+  color: #fff0e4;
+  border: 3px double #e6c8c1;
+  text-align: center;
+}
+
+.gyaru-site .bookshop-sign span,
+.gyaru-site .bookshop-sign small {
+  font-size: 8px;
+  letter-spacing: .15em;
+}
+
+.gyaru-site .bookshop-sign strong {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 18px;
+}
+
+.gyaru-site .bookshop-window .books-display {
+  padding: 22px 5px;
+  border-bottom: 2px solid #9f806c;
+}
+
+.gyaru-site .bookshop-note {
+  padding: 12px;
+  background: #fff7e9;
+  color: #58414a;
+  transform: rotate(-1deg);
+  box-shadow: 2px 3px 5px rgba(60, 30, 20, .12);
+}
+
+.gyaru-site .bookshop-note span {
+  font-size: 8px;
+  letter-spacing: .12em;
+}
+
+.gyaru-site .bookshop-note p {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.gyaru-site .bookshop-note small {
+  font-size: 9px;
+}
+
+.gyaru-site .books-caption h2 {
+  line-height: .95;
+}
+
+/* SMALL DETAIL IMPROVEMENTS */
+
+.gyaru-site .personal-id {
+  position: relative;
+  padding: 15px;
+  background: #f8e7d9;
+  border: 1px solid #d3a9a8;
+  box-shadow: 4px 5px 0 rgba(50, 20, 30, .13);
+  transform: rotate(-2deg);
+}
+
+.gyaru-site .id-top,
+.gyaru-site .id-details span {
+  display: block;
+  font-size: 8px;
+  letter-spacing: .1em;
+  color: #956477;
+}
+
+.gyaru-site .personal-id h2 {
+  margin: 15px 0;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 29px;
+  line-height: .9;
+}
+
+.gyaru-site .personal-id h2 i {
+  color: #b64d81;
+}
+
+.gyaru-site .id-details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+}
+
+.gyaru-site .id-details strong {
+  margin-bottom: 7px;
+  font-size: 11px;
+}
+
+.gyaru-site .id-barcode {
+  margin-top: 12px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  overflow: hidden;
+}
+
+.gyaru-site .id-stamp {
+  position: absolute;
+  right: 12px;
+  bottom: 30px;
+  padding: 7px;
+  border: 2px solid #c24e86;
+  border-radius: 50%;
+  color: #c24e86;
+  font-size: 9px;
+  text-align: center;
+  transform: rotate(12deg);
+}
+
+.gyaru-site .profile-aside {
+  font-size: 9px;
+  text-align: right;
+  transform: rotate(-2deg);
+}
+
+/* MOBILE */
+
+@media (max-width: 560px) {
+  .gyaru-site .film-frame {
+    min-height: 95px;
+  }
+
+  .gyaru-site .film-frame strong {
+    font-size: 12px;
+  }
+
+  .gyaru-site .music-store-controls {
+    justify-content: center;
+  }
+
+  .gyaru-site .bookshop-sign strong {
+    font-size: 15px;
+  }
+}
+/* MAIN TITLE */
+.gyaru-site .masthead-center h1 {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 900;
+  font-size: clamp(5rem, 12vw, 10rem);
+  letter-spacing: -0.085em;
+  line-height: 0.95;
+  transform: rotate(-2deg);
+}
+
+.gyaru-site .masthead-center h1 span {
+  font-family: 'Yusei Magic', sans-serif;
+  display: inline-block;
+  font-size: 0.5em;
+  transform: rotate(12deg) translateY(-0.2em);
+}
+
+/* SECTION TITLES */
+.gyaru-site h2,
+.gyaru-site h3 {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.055em;
+}
+
+/* DECORATIVE SCRAPBOOK HEADINGS */
+.gyaru-site .editorial-copy h2,
+.gyaru-site .personal-id h2 {
+  font-family: 'Yusei Magic', sans-serif;
+  font-weight: 400;
+}
+
+/* TINY INTERNET ANNOTATIONS */
+.gyaru-site .section-label,
+.gyaru-site .profile-label,
+.gyaru-site .editorial-number {
+  font-family: 'DM Mono', monospace;
+  letter-spacing: 0.08em;
+}
+/* SUBTLE Y2K BACKGROUND */
+
+.gyaru-site {
+  position: relative;
+  isolation: isolate;
+  background-color: #f2efe9;
+}
+
+/* Soft ambient pink lighting */
+.gyaru-site::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      ellipse at 5% 10%,
+      rgba(235, 174, 202, 0.22),
+      transparent 32%
+    ),
+    radial-gradient(
+      ellipse at 95% 35%,
+      rgba(190, 169, 213, 0.16),
+      transparent 30%
+    ),
+    radial-gradient(
+      ellipse at 45% 100%,
+      rgba(255, 210, 225, 0.2),
+      transparent 38%
+    );
+}
+
+/* Delicate background sparkle texture */
+.gyaru-site::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background-image:
+    radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.8) 0.8px,
+      transparent 1.5px
+    );
+
+  background-size: 67px 73px;
+  opacity: 0.22;
 }
